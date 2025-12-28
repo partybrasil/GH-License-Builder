@@ -19,6 +19,7 @@
 **GH-License-Builder** es una aplicación web **100% client-side** (sin backend) que te permite seleccionar, personalizar y generar textos de licencias para tus proyectos de GitHub. Con una interfaz visual moderna y animada, podrás:
 
 - 📝 **Seleccionar** entre 11 licencias populares (MIT, Apache 2.0, GPL, BSD, MPL, CC0, Unlicense, y más)
+- 🎨 **Elegir entre 20 temas** con diferentes estilos visuales, colores y animaciones
 - ✏️ **Personalizar** nombre del titular, año, nombre del proyecto y URL
 - 📋 **Copiar** el texto de la licencia al portapapeles
 - 💾 **Descargar** el archivo LICENSE listo para tu repositorio
@@ -29,13 +30,13 @@
 
 🎯 **Interfaz Intuitiva** con diseño moderno y responsive  
 📦 **11 Licencias** predefinidas (MIT, Apache 2.0, GPLv3, LGPLv3, AGPLv3, MPL 2.0, EPL 2.0, BSD 2/3-Clause, CC0, Unlicense)  
-🎨 **Información Clara** de permisos, condiciones y limitaciones  
+🎨 **20 Temas Únicos** con diferentes layouts, colores y animaciones ([Ver Guía de Temas](THEMES.md))  
 🔍 **Tabla Comparativa** para elegir la licencia correcta  
 ⚡ **Generación Instantánea** de texto personalizado  
 📋 **Export** - Copiar o descargar  
 💾 **Funciona Offline** tras la primera carga (PWA ready)  
 🌐 **GitHub Pages** desplegado automáticamente  
-🎭 **Modo Claro/Oscuro** (respeta preferencias del sistema)  
+🎭 **Cambio de Tema en Tiempo Real** con selector integrado  
 📱 **Responsive** - funciona en escritorio y móvil
 
 ---
@@ -118,6 +119,23 @@ Compara rápidamente todas las licencias:
 - Uso comercial permitido
 - Requisitos para código derivado
 - Mejores casos de uso
+
+### 🎨 Temas y Personalización
+
+Disfruta de **20 temas únicos** con diferentes estilos visuales:
+
+- **Gradient Waves** - Gradientes coloridos con animaciones suaves (por defecto)
+- **Dark Cyberpunk** - Estética cyberpunk con luces neón
+- **Minimal White** - Diseño minimalista limpio
+- **Nature Organic** - Verdes terrosos orgánicos
+- **Ocean Depths** - Azules profundos del océano
+- **Retro Synthwave** - Estilo retro de los 80s
+- **High Contrast Monochrome** - Blanco y negro de alto contraste
+- **Neon Matrix** - Estilo Matrix con código verde
+- **Glass Morphism** - Diseño glassmórfico moderno
+- ...y 11 temas más!
+
+📖 **[Ver Guía Completa de Temas](THEMES.md)** con screenshots e instrucciones de personalización
 
 ---
 
