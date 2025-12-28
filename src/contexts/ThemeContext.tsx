@@ -35,8 +35,13 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     }
   };
 
+  const value = useMemo(
+    () => ({ currentTheme, setTheme, allThemes: themes }),
+    [currentTheme]
+  );
+
   return (
-    <ThemeContext.Provider value={{ currentTheme, setTheme, allThemes: themes }}>
+    <ThemeContext.Provider value={value}>
       {children}
     </ThemeContext.Provider>
   );

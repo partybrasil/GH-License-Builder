@@ -385,10 +385,6 @@ interface Theme {
     type: 'two-column' | 'single-column' | 'three-column' | 
           'sidebar-left' | 'sidebar-right' | 'tabs' | 
           'accordion' | 'cards-grid' | 'masonry' | 'dashboard';
-    heroStyle: 'gradient' | 'solid' | 'pattern' | 'animated' | 'minimal' | 'split';
-    cardStyle: 'rounded' | 'sharp' | 'glass' | 'neumorphic' | 'elevated' | 'flat';
-    spacing: 'compact' | 'normal' | 'relaxed' | 'wide';
-    direction: 'ltr' | 'rtl';   // Dirección del texto
   };
   
   background: {                  // Colores de fondo
@@ -415,6 +411,7 @@ interface Theme {
     primary: string;
     hover: string;
     text: string;
+    success?: string;            // Estado de éxito (opcional)
   };
 }
 ```
@@ -478,6 +475,9 @@ El sistema incluye más de 20 animaciones CSS personalizadas:
   id: 'mi-tema-personalizado',
   name: 'Mi Tema Personalizado',
   description: 'Descripción de mi tema',
+  layout: {
+    type: 'two-column', // Tipo de layout requerido
+  },
   background: {
     main: 'bg-gradient-to-br from-color-500 to-color-700',
     hero: 'bg-gradient-to-r from-color-600 to-color-800',
@@ -494,11 +494,6 @@ El sistema incluye más de 20 animaciones CSS personalizadas:
     backgroundAnimation: 'animate-gradient-x',
     cardAnimation: 'transition-all duration-300',
     heroAnimation: 'animate-fade-in',
-  },
-  layout: {
-    heroStyle: 'gradient',
-    cardStyle: 'rounded',
-    spacing: 'normal',
   },
   button: {
     primary: 'bg-color-600 text-white',

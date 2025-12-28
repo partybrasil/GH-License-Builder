@@ -12,12 +12,15 @@ export default function ThemeSelector() {
         <select
           value={currentTheme.id}
           onChange={(e) => setTheme(e.target.value)}
-          className={`w-full ${currentTheme.background.card} ${currentTheme.text.primary} border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-opacity-50`}
-          style={{
-            borderColor: currentTheme.text.accent.includes('text-') 
-              ? currentTheme.text.accent.replace('text-', '') 
-              : 'currentColor'
-          }}
+          className={`w-full ${currentTheme.background.card} ${currentTheme.text.primary} border-2 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-opacity-50 ${
+            currentTheme.text.accent && currentTheme.text.accent.startsWith('text-')
+              ? currentTheme.text.accent.replace('text-', 'focus:ring-')
+              : 'focus:ring-current'
+          } ${
+            currentTheme.text.accent && currentTheme.text.accent.startsWith('text-')
+              ? currentTheme.text.accent.replace('text-', 'border-')
+              : 'border-current'
+          }`}
         >
           {allThemes.map((theme) => (
             <option key={theme.id} value={theme.id}>

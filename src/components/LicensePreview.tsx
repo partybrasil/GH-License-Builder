@@ -79,7 +79,7 @@ export default function LicensePreview({ customization }: LicensePreviewProps) {
               onClick={handleCopy}
               className={`flex-1 px-4 py-2 rounded-lg font-medium transition-all transform hover:scale-105 ${
                 copied
-                  ? 'bg-green-600 text-white'
+                  ? currentTheme.button.success || 'bg-green-600 text-white'
                   : `${currentTheme.button.primary} ${currentTheme.button.hover}`
               }`}
             >

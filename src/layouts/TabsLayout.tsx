@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { LayoutProps } from './LayoutProps';
+import { useTheme } from '../contexts/ThemeContext';
 
 // Tabs Layout (Tabbed interface)
 export function TabsLayout({
@@ -15,6 +16,7 @@ export function TabsLayout({
   textPrimary,
 }: LayoutProps) {
   const [activeTab, setActiveTab] = useState<'select' | 'customize' | 'preview' | 'info' | 'compare'>('select');
+  const { currentTheme } = useTheme();
 
   const tabButtonClass = (tab: string) => 
     `px-6 py-3 font-semibold transition-all ${
@@ -89,7 +91,7 @@ export function TabsLayout({
             />
             <button
               onClick={() => setActiveTab('preview')}
-              className="mt-6 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+              className={`mt-6 px-6 py-2 rounded font-medium ${currentTheme.button.primary} ${currentTheme.button.hover} transition-all`}
             >
               Siguiente: Ver Preview →
             </button>
