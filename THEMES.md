@@ -1,6 +1,23 @@
 # 🎨 Guía de Temas de GH-License-Builder
 
-Esta aplicación incluye **20 temas totalmente diferentes**, cada uno con su propio diseño, colores, animaciones y estética única. Los temas se pueden cambiar fácilmente usando el selector en la esquina superior derecha de la aplicación.
+Esta aplicación incluye **20 temas totalmente diferentes**, cada uno con su propio **layout estructural único**, colores, animaciones y estética. Los temas se pueden cambiar fácilmente usando el selector en la esquina superior derecha de la aplicación.
+
+## 🆕 Novedad: Layouts Estructuralmente Diferentes
+
+A diferencia de otros sistemas de temas que solo cambian colores, **cada tema en esta aplicación tiene un layout completamente diferente** que reorganiza el contenido de manera única:
+
+- **Two-Column**: División clásica 50/50 izquierda/derecha
+- **Single-Column**: Apilamiento vertical centrado
+- **Three-Column**: División en 3 columnas equilibradas
+- **Sidebar-Left**: Barra lateral estrecha a la izquierda con contenido amplio
+- **Sidebar-Right**: Contenido principal amplio con sidebar derecha
+- **Tabs**: Navegación por pestañas estilo wizard
+- **Accordion**: Secciones colapsables tipo acordeón
+- **Cards-Grid**: Grid de tarjetas con tamaños asimétricos
+- **Masonry**: Diseño escalonado tipo Pinterest
+- **Dashboard**: Estilo dashboard con preview destacado
+
+El mismo contenido se presenta de **formas completamente diferentes** según el tema seleccionado.
 
 ## 📋 Tabla de Contenidos
 
@@ -48,6 +65,7 @@ const [currentTheme, setCurrentTheme] = useState<Theme>(defaultTheme);
 
 ### 1. **Gradient Waves** (Por Defecto)
 - **ID**: `gradient-waves`
+- **Layout**: Two-Column (división clásica izquierda/derecha)
 - **Descripción**: Gradientes coloridos con animaciones suaves
 - **Colores**: Azul, púrpura, rosa
 - **Estilo**: Moderno, vibrante, profesional
@@ -59,6 +77,7 @@ const [currentTheme, setCurrentTheme] = useState<Theme>(defaultTheme);
 
 ### 2. **Dark Cyberpunk**
 - **ID**: `dark-cyberpunk`
+- **Layout**: Sidebar-Right (contenido amplio + sidebar derecha)
 - **Descripción**: Estética cyberpunk oscura con luces neón
 - **Colores**: Negro, cian, rosa
 - **Estilo**: Futurista, tecnológico, dramático
@@ -71,6 +90,7 @@ const [currentTheme, setCurrentTheme] = useState<Theme>(defaultTheme);
 
 ### 3. **Minimal White**
 - **ID**: `minimal-white`
+- **Layout**: Single-Column (apilamiento vertical centrado)
 - **Descripción**: Diseño minimalista limpio con sombras sutiles
 - **Colores**: Blanco, gris
 - **Estilo**: Minimalista, elegante, simple
@@ -82,6 +102,7 @@ const [currentTheme, setCurrentTheme] = useState<Theme>(defaultTheme);
 
 ### 4. **Nature Organic**
 - **ID**: `nature-organic`
+- **Layout**: Three-Column (3 columnas equilibradas)
 - **Descripción**: Verdes terrosos con formas orgánicas fluidas
 - **Colores**: Verde, esmeralda, turquesa
 - **Estilo**: Natural, relajante, ecológico
@@ -94,6 +115,7 @@ const [currentTheme, setCurrentTheme] = useState<Theme>(defaultTheme);
 
 ### 5. **Ocean Depths**
 - **ID**: `ocean-depths`
+- **Layout**: Dashboard (preview destacado arriba)
 - **Descripción**: Azul océano profundo con animaciones de olas
 - **Colores**: Azul oscuro, cian, turquesa
 - **Estilo**: Profundo, tranquilo, fluido
@@ -106,6 +128,7 @@ const [currentTheme, setCurrentTheme] = useState<Theme>(defaultTheme);
 
 ### 6. **Sunset Warm**
 - **ID**: `sunset-warm`
+- **Layout**: Cards-Grid (grid asimétrico de tarjetas)
 - **Descripción**: Colores cálidos de atardecer con acentos dorados
 - **Colores**: Naranja, rojo, amarillo
 - **Estilo**: Cálido, acogedor, energético
@@ -115,6 +138,7 @@ const [currentTheme, setCurrentTheme] = useState<Theme>(defaultTheme);
 
 ### 7. **Retro Synthwave**
 - **ID**: `retro-synthwave`
+- **Layout**: Sidebar-Left (sidebar estrecha izquierda)
 - **Descripción**: Retroonda de los 80 con neón rosa y púrpura
 - **Colores**: Rosa neón, púrpura, azul
 - **Estilo**: Retro, nostálgico, vibrante
@@ -127,6 +151,7 @@ const [currentTheme, setCurrentTheme] = useState<Theme>(defaultTheme);
 
 ### 8. **Corporate Professional**
 - **ID**: `corporate-professional`
+- **Layout**: Tabs (navegación por pestañas tipo wizard)
 - **Descripción**: Tema profesional de negocios con tonos azules
 - **Colores**: Azul oscuro, gris pizarra
 - **Estilo**: Profesional, corporativo, confiable
@@ -136,6 +161,7 @@ const [currentTheme, setCurrentTheme] = useState<Theme>(defaultTheme);
 
 ### 9. **Aurora Borealis**
 - **ID**: `aurora-borealis`
+- **Layout**: Masonry (diseño escalonado tipo Pinterest)
 - **Descripción**: Luces del norte con colores fluidos
 - **Colores**: Verde, azul, púrpura
 - **Estilo**: Mágico, etéreo, fascinante
@@ -146,6 +172,7 @@ const [currentTheme, setCurrentTheme] = useState<Theme>(defaultTheme);
 
 ### 10. **Space Galaxy**
 - **ID**: `space-galaxy`
+- **Layout**: Accordion (secciones colapsables)
 - **Descripción**: Espacio profundo con estrellas y nebulosas
 - **Colores**: Negro, púrpura, azul
 - **Estilo**: Espacial, misterioso, profundo
@@ -156,6 +183,7 @@ const [currentTheme, setCurrentTheme] = useState<Theme>(defaultTheme);
 
 ### 11. **Pastel Dreamy**
 - **ID**: `pastel-dreamy`
+- **Layout**: Two-Column RTL (dirección derecha a izquierda)
 - **Descripción**: Colores pastel suaves con atmósfera soñadora
 - **Colores**: Rosa pastel, púrpura, azul
 - **Estilo**: Suave, romántico, delicado
@@ -165,6 +193,7 @@ const [currentTheme, setCurrentTheme] = useState<Theme>(defaultTheme);
 
 ### 12. **High Contrast Monochrome**
 - **ID**: `high-contrast-mono`
+- **Layout**: Single-Column (vertical compacto)
 - **Descripción**: Diseño audaz en blanco y negro de alto contraste
 - **Colores**: Negro, blanco
 - **Estilo**: Audaz, minimalista, impactante
@@ -176,6 +205,7 @@ const [currentTheme, setCurrentTheme] = useState<Theme>(defaultTheme);
 
 ### 13. **Fire & Ember**
 - **ID**: `fire-ember`
+- **Layout**: Cards-Grid (grid con glassmorphism)
 - **Descripción**: Colores calientes de fuego con efectos brillantes
 - **Colores**: Rojo, naranja, amarillo
 - **Estilo**: Caliente, enérgico, intenso
@@ -186,6 +216,7 @@ const [currentTheme, setCurrentTheme] = useState<Theme>(defaultTheme);
 
 ### 14. **Ice & Frost**
 - **ID**: `ice-frost`
+- **Layout**: Sidebar-Right (sidebar con efecto cristal)
 - **Descripción**: Azul hielo frío con efectos cristalinos
 - **Colores**: Azul hielo, cian, blanco
 - **Estilo**: Frío, cristalino, elegante
@@ -196,6 +227,7 @@ const [currentTheme, setCurrentTheme] = useState<Theme>(defaultTheme);
 
 ### 15. **Forest Woodland**
 - **ID**: `forest-woodland`
+- **Layout**: Three-Column (columnas con animaciones)
 - **Descripción**: Verdes de bosque profundo con texturas naturales
 - **Colores**: Verde oscuro, esmeralda, lima
 - **Estilo**: Natural, tranquilo, orgánico
@@ -206,6 +238,7 @@ const [currentTheme, setCurrentTheme] = useState<Theme>(defaultTheme);
 
 ### 16. **Desert Sand**
 - **ID**: `desert-sand`
+- **Layout**: Dashboard (espaciado relaxed)
 - **Descripción**: Tonos cálidos de desierto con texturas arenosas
 - **Colores**: Ámbar, naranja, amarillo
 - **Estilo**: Cálido, terroso, natural
@@ -215,6 +248,7 @@ const [currentTheme, setCurrentTheme] = useState<Theme>(defaultTheme);
 
 ### 17. **Neon Matrix**
 - **ID**: `neon-matrix`
+- **Layout**: Tabs (pestañas compactas)
 - **Descripción**: Código verde estilo Matrix con efectos digitales
 - **Colores**: Verde neón, negro
 - **Estilo**: Digital, hacker, tecnológico
@@ -227,6 +261,7 @@ const [currentTheme, setCurrentTheme] = useState<Theme>(defaultTheme);
 
 ### 18. **Candy Playful**
 - **ID**: `candy-playful`
+- **Layout**: Masonry (fluido con rebote)
 - **Descripción**: Colores dulces de caramelo con vibra juguetona
 - **Colores**: Rosa chicle, púrpura, azul
 - **Estilo**: Divertido, juguetón, alegre
@@ -239,6 +274,7 @@ const [currentTheme, setCurrentTheme] = useState<Theme>(defaultTheme);
 
 ### 19. **Newspaper Print**
 - **ID**: `newspaper-print`
+- **Layout**: Accordion (acordeón compacto)
 - **Descripción**: Diseño clásico de periódico con fuentes serif
 - **Colores**: Blanco, negro, gris
 - **Estilo**: Clásico, editorial, tradicional
@@ -248,6 +284,7 @@ const [currentTheme, setCurrentTheme] = useState<Theme>(defaultTheme);
 
 ### 20. **Glass Morphism**
 - **ID**: `glass-morphism`
+- **Layout**: Sidebar-Left (glass con blur)
 - **Descripción**: Diseño glassmórfico moderno con fondos difuminados
 - **Colores**: Multicolor con transparencias
 - **Estilo**: Moderno, elegante, sofisticado
@@ -259,6 +296,70 @@ const [currentTheme, setCurrentTheme] = useState<Theme>(defaultTheme);
 ---
 
 ## 🛠️ Características Técnicas
+
+### Sistema de Layouts Dinámicos
+
+El sistema de temas incluye **10 tipos de layouts estructuralmente diferentes** que reorganizan el contenido de formas únicas:
+
+#### 1. Two-Column Layout
+- División clásica 50/50 izquierda/derecha
+- Configuración en un lado, preview en el otro
+- **Usado por**: Gradient Waves, Pastel Dreamy
+
+#### 2. Single-Column Layout
+- Apilamiento vertical centrado
+- Todo el contenido fluye de arriba a abajo
+- Ideal para lectura lineal
+- **Usado por**: Minimal White, High Contrast
+
+#### 3. Three-Column Layout
+- Divide el espacio en 3 columnas equilibradas
+- Selector | Configuración | Preview
+- Uso eficiente del espacio horizontal
+- **Usado por**: Nature Organic, Forest Woodland
+
+#### 4. Sidebar-Left Layout
+- Barra lateral estrecha a la izquierda (~320px)
+- Contenido principal amplio a la derecha
+- Navegación compacta
+- **Usado por**: Retro Synthwave, Glass Morphism
+
+#### 5. Sidebar-Right Layout
+- Contenido principal amplio a la izquierda
+- Sidebar de personalización a la derecha (~384px)
+- Preview e info tienen más espacio
+- **Usado por**: Dark Cyberpunk, Ice & Frost
+
+#### 6. Tabs Layout
+- Navegación por pestañas estilo wizard
+- Cambio entre secciones con tabs superiores
+- Flujo paso a paso: Seleccionar → Personalizar → Preview → Info → Comparar
+- **Usado por**: Corporate Professional, Neon Matrix
+
+#### 7. Accordion Layout
+- Secciones colapsables tipo acordeón
+- Solo una sección visible a la vez
+- Ahorra espacio vertical
+- Interacción click para expandir/colapsar
+- **Usado por**: Space Galaxy, Newspaper Print
+
+#### 8. Cards-Grid Layout
+- Grid asimétrico de tarjetas
+- Diferentes tamaños de tarjetas (2x1, 1x1, etc.)
+- Diseño dinámico y moderno
+- **Usado por**: Sunset Warm, Fire & Ember
+
+#### 9. Masonry Layout
+- Diseño escalonado tipo Pinterest
+- CSS columns para layout fluido
+- Tarjetas se adaptan a contenido
+- **Usado por**: Aurora Borealis, Candy Playful
+
+#### 10. Dashboard Layout
+- Estilo dashboard con preview destacado arriba
+- Grid de diferentes tamaños
+- Preview ocupa 2/3 del ancho superior
+- **Usado por**: Ocean Depths, Desert Sand
 
 ### Arquitectura del Sistema de Temas
 
@@ -280,6 +381,16 @@ interface Theme {
   name: string;                  // Nombre mostrado
   description: string;           // Descripción breve
   
+  layout: {                      // Configuración de layout
+    type: 'two-column' | 'single-column' | 'three-column' | 
+          'sidebar-left' | 'sidebar-right' | 'tabs' | 
+          'accordion' | 'cards-grid' | 'masonry' | 'dashboard';
+    heroStyle: 'gradient' | 'solid' | 'pattern' | 'animated' | 'minimal' | 'split';
+    cardStyle: 'rounded' | 'sharp' | 'glass' | 'neumorphic' | 'elevated' | 'flat';
+    spacing: 'compact' | 'normal' | 'relaxed' | 'wide';
+    direction: 'ltr' | 'rtl';   // Dirección del texto
+  };
+  
   background: {                  // Colores de fondo
     main: string;                // Fondo principal
     hero: string;                // Fondo del hero
@@ -300,18 +411,40 @@ interface Theme {
     heroAnimation?: string;
   };
   
-  layout: {                      // Estilo de diseño
-    heroStyle: 'gradient' | 'solid' | 'pattern' | 'animated';
-    cardStyle: 'rounded' | 'sharp' | 'glass' | 'neumorphic';
-    spacing: 'compact' | 'normal' | 'relaxed';
-  };
-  
   button: {                      // Estilos de botón
     primary: string;
     hover: string;
     text: string;
   };
 }
+```
+
+### Componentes de Layout
+
+Cada layout es un componente React independiente en `src/layouts/`:
+
+- `TwoColumnLayout.tsx` - Grid 2 columnas
+- `SingleColumnLayout.tsx` - Stack vertical
+- `ThreeColumnLayout.tsx` - Grid 3 columnas
+- `SidebarLeftLayout.tsx` - Flex con sidebar izquierda
+- `SidebarRightLayout.tsx` - Flex con sidebar derecha
+- `TabsLayout.tsx` - Navegación con tabs y estado
+- `AccordionLayout.tsx` - Secciones colapsables con estado
+- `CardsGridLayout.tsx` - Grid asimétrico
+- `MasonryLayout.tsx` - CSS columns
+- `DashboardLayout.tsx` - Grid tipo dashboard
+
+El layout se selecciona dinámicamente en `App.tsx` según el tema actual:
+
+```typescript
+const renderLayout = () => {
+  switch (currentTheme.layout.type) {
+    case 'single-column': return <SingleColumnLayout {...props} />;
+    case 'three-column': return <ThreeColumnLayout {...props} />;
+    case 'sidebar-left': return <SidebarLeftLayout {...props} />;
+    // ... etc
+  }
+};
 ```
 
 ### Animaciones Disponibles
