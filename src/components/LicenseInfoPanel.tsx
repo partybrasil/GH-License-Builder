@@ -1,13 +1,17 @@
 import type { LicenseDescriptor } from '../types/license';
+import { useTheme } from '../contexts/ThemeContext';
 
 interface LicenseInfoPanelProps {
   license: LicenseDescriptor;
 }
 
 export default function LicenseInfoPanel({ license }: LicenseInfoPanelProps) {
+  const { currentTheme } = useTheme();
+  const cardClasses = `${currentTheme.background.card} rounded-2xl shadow-xl p-6 ${currentTheme.animations.cardAnimation} ${currentTheme.background.cardHover}`;
+
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 transition-all duration-300 hover:shadow-2xl">
-      <h2 className="text-2xl font-bold mb-4 text-gray-800 dark:text-white">
+    <div className={cardClasses}>
+      <h2 className={`text-2xl font-bold mb-4 ${currentTheme.text.primary}`}>
         ¿Qué permite esta licencia?
       </h2>
 
@@ -22,8 +26,8 @@ export default function LicenseInfoPanel({ license }: LicenseInfoPanelProps) {
               <li key={idx} className="flex items-start gap-2 text-sm">
                 <span className="text-green-500 mt-0.5">●</span>
                 <div>
-                  <strong className="text-gray-900 dark:text-white">{permission.label}:</strong>
-                  <span className="text-gray-600 dark:text-gray-300"> {permission.description}</span>
+                  <strong className={currentTheme.text.primary}>{permission.label}:</strong>
+                  <span className={currentTheme.text.secondary}> {permission.description}</span>
                 </div>
               </li>
             ))}
@@ -41,8 +45,8 @@ export default function LicenseInfoPanel({ license }: LicenseInfoPanelProps) {
                 <li key={idx} className="flex items-start gap-2 text-sm">
                   <span className="text-yellow-500 mt-0.5">●</span>
                   <div>
-                    <strong className="text-gray-900 dark:text-white">{condition.label}:</strong>
-                    <span className="text-gray-600 dark:text-gray-300"> {condition.description}</span>
+                    <strong className={currentTheme.text.primary}>{condition.label}:</strong>
+                    <span className={currentTheme.text.secondary}> {condition.description}</span>
                   </div>
                 </li>
               ))}
@@ -60,8 +64,8 @@ export default function LicenseInfoPanel({ license }: LicenseInfoPanelProps) {
               <li key={idx} className="flex items-start gap-2 text-sm">
                 <span className="text-red-500 mt-0.5">●</span>
                 <div>
-                  <strong className="text-gray-900 dark:text-white">{limitation.label}:</strong>
-                  <span className="text-gray-600 dark:text-gray-300"> {limitation.description}</span>
+                  <strong className={currentTheme.text.primary}>{limitation.label}:</strong>
+                  <span className={currentTheme.text.secondary}> {limitation.description}</span>
                 </div>
               </li>
             ))}
@@ -69,12 +73,12 @@ export default function LicenseInfoPanel({ license }: LicenseInfoPanelProps) {
         </div>
 
         {/* Reference Link */}
-        <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
+        <div className={`pt-4 border-t ${currentTheme.text.secondary}`} style={{borderTopWidth: '1px'}}>
           <a
             href={license.referenceUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-purple-600 dark:text-purple-400 hover:underline text-sm font-medium"
+            className={`${currentTheme.text.accent} hover:underline text-sm font-medium`}
           >
             📖 Ver texto oficial completo →
           </a>

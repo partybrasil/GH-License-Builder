@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import type { LicenseCustomization } from './types/license';
 import { licenses } from './data/licenses';
+import { ThemeProvider, useTheme } from './contexts/ThemeContext';
 import Hero from './components/Hero';
 import LicenseSelector from './components/LicenseSelector';
 import CustomizationForm from './components/CustomizationForm';
@@ -8,10 +9,12 @@ import LicensePreview from './components/LicensePreview';
 import LicenseInfoPanel from './components/LicenseInfoPanel';
 import LicenseComparison from './components/LicenseComparison';
 import Footer from './components/Footer';
+import ThemeSelector from './components/ThemeSelector';
 
 const STORAGE_KEY = 'gh-license-builder-state';
 
-function App() {
+function AppContent() {
+  const { currentTheme } = useTheme();
   const currentYear = new Date().getFullYear().toString();
   
   const [customization, setCustomization] = useState<LicenseCustomization>({
@@ -50,16 +53,19 @@ function App() {
     setCustomization(prev => ({ ...prev, ...updates }));
   };
 
+  const cardClasses = `${currentTheme.background.card} rounded-2xl shadow-xl p-6 ${currentTheme.animations.cardAnimation} ${currentTheme.background.cardHover}`;
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-900 dark:to-blue-900">
+    <div className={`min-h-screen ${currentTheme.background.main} ${currentTheme.animations.backgroundAnimation || ''}`}>
+      <ThemeSelector />
       <Hero />
       
       <main className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           {/* Left Column - Configuration */}
           <div className="space-y-6">
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 transition-all duration-300 hover:shadow-2xl">
-              <h2 className="text-2xl font-bold mb-4 text-gray-800 dark:text-white">
+            <div className={cardClasses}>
+              <h2 className={`text-2xl font-bold mb-4 ${currentTheme.text.primary}`}>
                 Selecciona tu Licencia
               </h2>
               <LicenseSelector
@@ -68,8 +74,8 @@ function App() {
               />
             </div>
 
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 transition-all duration-300 hover:shadow-2xl">
-              <h2 className="text-2xl font-bold mb-4 text-gray-800 dark:text-white">
+            <div className={cardClasses}>
+              <h2 className={`text-2xl font-bold mb-4 ${currentTheme.text.primary}`}>
                 Personaliza los Datos
               </h2>
               <CustomizationForm
@@ -91,6 +97,14 @@ function App() {
 
       <Footer />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <ThemeProvider>
+      <AppContent />
+    </ThemeProvider>
   );
 }
 

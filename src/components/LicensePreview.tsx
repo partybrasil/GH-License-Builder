@@ -2,12 +2,14 @@ import { useState } from 'react';
 import type { LicenseCustomization } from '../types/license';
 import { generateLicenseText, copyToClipboard, downloadLicenseFile } from '../utils/licenseUtils';
 import { validateCustomization } from '../utils/licenseUtils';
+import { useTheme } from '../contexts/ThemeContext';
 
 interface LicensePreviewProps {
   customization: LicenseCustomization;
 }
 
 export default function LicensePreview({ customization }: LicensePreviewProps) {
+  const { currentTheme } = useTheme();
   const [copied, setCopied] = useState(false);
   const [activeTab, setActiveTab] = useState<'text' | 'markdown'>('text');
 
@@ -28,17 +30,19 @@ export default function LicensePreview({ customization }: LicensePreviewProps) {
     downloadLicenseFile(licenseText, 'LICENSE');
   };
 
+  const cardClasses = `${currentTheme.background.card} rounded-2xl shadow-xl p-6 ${currentTheme.animations.cardAnimation} ${currentTheme.background.cardHover}`;
+
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 transition-all duration-300 hover:shadow-2xl">
+    <div className={cardClasses}>
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-2xl font-bold text-gray-800 dark:text-white">Vista Previa</h2>
+        <h2 className={`text-2xl font-bold ${currentTheme.text.primary}`}>Vista Previa</h2>
         <div className="flex gap-2">
           <button
             onClick={() => setActiveTab('text')}
             className={`px-3 py-1 rounded-lg text-sm font-medium transition-colors ${
               activeTab === 'text'
-                ? 'bg-purple-600 text-white'
-                : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+                ? `${currentTheme.button.primary}`
+                : `${currentTheme.text.secondary} opacity-60 hover:opacity-100`
             }`}
           >
             Texto
@@ -47,8 +51,8 @@ export default function LicensePreview({ customization }: LicensePreviewProps) {
             onClick={() => setActiveTab('markdown')}
             className={`px-3 py-1 rounded-lg text-sm font-medium transition-colors ${
               activeTab === 'markdown'
-                ? 'bg-purple-600 text-white'
-                : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+                ? `${currentTheme.button.primary}`
+                : `${currentTheme.text.secondary} opacity-60 hover:opacity-100`
             }`}
           >
             Markdown
@@ -57,8 +61,8 @@ export default function LicensePreview({ customization }: LicensePreviewProps) {
       </div>
 
       {!isValid ? (
-        <div className="bg-gray-100 dark:bg-gray-900 rounded-lg p-8 text-center">
-          <p className="text-gray-600 dark:text-gray-400">
+        <div className={`${currentTheme.background.card} opacity-70 rounded-lg p-8 text-center`}>
+          <p className={currentTheme.text.secondary}>
             Completa los campos obligatorios para generar la licencia
           </p>
         </div>
@@ -76,14 +80,14 @@ export default function LicensePreview({ customization }: LicensePreviewProps) {
               className={`flex-1 px-4 py-2 rounded-lg font-medium transition-all transform hover:scale-105 ${
                 copied
                   ? 'bg-green-600 text-white'
-                  : 'bg-purple-600 text-white hover:bg-purple-700'
+                  : `${currentTheme.button.primary} ${currentTheme.button.hover}`
               }`}
             >
               {copied ? '✓ Copiado' : '📋 Copiar'}
             </button>
             <button
               onClick={handleDownload}
-              className="flex-1 px-4 py-2 rounded-lg font-medium bg-blue-600 text-white hover:bg-blue-700 transition-all transform hover:scale-105"
+              className={`flex-1 px-4 py-2 rounded-lg font-medium ${currentTheme.button.primary} ${currentTheme.button.hover} transition-all transform hover:scale-105`}
             >
               💾 Descargar LICENSE
             </button>
