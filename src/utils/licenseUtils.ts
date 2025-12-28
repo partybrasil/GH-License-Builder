@@ -1,6 +1,9 @@
 import type { LicenseCustomization, ValidationError } from '../types/license';
 import { licenses } from '../data/licenses';
 
+// Note: All error messages and UI text are in Spanish as per project requirements
+// For internationalization, consider implementing i18n in a future version
+
 export function generateLicenseText(customization: LicenseCustomization): string {
   const license = licenses.find(l => l.id === customization.licenseId);
   if (!license) {
