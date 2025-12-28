@@ -10,6 +10,18 @@ import LicenseInfoPanel from './components/LicenseInfoPanel';
 import LicenseComparison from './components/LicenseComparison';
 import Footer from './components/Footer';
 import ThemeSelector from './components/ThemeSelector';
+import {
+  TwoColumnLayout,
+  SingleColumnLayout,
+  ThreeColumnLayout,
+  SidebarLeftLayout,
+  SidebarRightLayout,
+  TabsLayout,
+  AccordionLayout,
+  CardsGridLayout,
+  MasonryLayout,
+  DashboardLayout,
+} from './layouts';
 
 const STORAGE_KEY = 'gh-license-builder-state';
 
@@ -54,46 +66,55 @@ function AppContent() {
   };
 
   const cardClasses = `${currentTheme.background.card} rounded-2xl shadow-xl p-6 ${currentTheme.animations.cardAnimation} ${currentTheme.background.cardHover}`;
+  const textPrimary = currentTheme.text.primary;
+
+  // Layout props
+  const layoutProps = {
+    customization,
+    selectedLicense,
+    handleCustomizationChange,
+    LicenseSelector,
+    CustomizationForm,
+    LicensePreview,
+    LicenseInfoPanel,
+    LicenseComparison,
+    cardClasses,
+    textPrimary,
+  };
+
+  // Select layout based on theme
+  const renderLayout = () => {
+    switch (currentTheme.layout.type) {
+      case 'single-column':
+        return <SingleColumnLayout {...layoutProps} />;
+      case 'three-column':
+        return <ThreeColumnLayout {...layoutProps} />;
+      case 'sidebar-left':
+        return <SidebarLeftLayout {...layoutProps} />;
+      case 'sidebar-right':
+        return <SidebarRightLayout {...layoutProps} />;
+      case 'tabs':
+        return <TabsLayout {...layoutProps} />;
+      case 'accordion':
+        return <AccordionLayout {...layoutProps} />;
+      case 'cards-grid':
+        return <CardsGridLayout {...layoutProps} />;
+      case 'masonry':
+        return <MasonryLayout {...layoutProps} />;
+      case 'dashboard':
+        return <DashboardLayout {...layoutProps} />;
+      case 'two-column':
+      default:
+        return <TwoColumnLayout {...layoutProps} />;
+    }
+  };
 
   return (
     <div className={`min-h-screen ${currentTheme.background.main} ${currentTheme.animations.backgroundAnimation || ''}`}>
       <ThemeSelector />
       <Hero />
       
-      <main className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-          {/* Left Column - Configuration */}
-          <div className="space-y-6">
-            <div className={cardClasses}>
-              <h2 className={`text-2xl font-bold mb-4 ${currentTheme.text.primary}`}>
-                Selecciona tu Licencia
-              </h2>
-              <LicenseSelector
-                selectedLicenseId={customization.licenseId}
-                onSelectLicense={(licenseId) => handleCustomizationChange({ licenseId })}
-              />
-            </div>
-
-            <div className={cardClasses}>
-              <h2 className={`text-2xl font-bold mb-4 ${currentTheme.text.primary}`}>
-                Personaliza los Datos
-              </h2>
-              <CustomizationForm
-                customization={customization}
-                onChange={handleCustomizationChange}
-              />
-            </div>
-          </div>
-
-          {/* Right Column - Preview & Info */}
-          <div className="space-y-6">
-            <LicensePreview customization={customization} />
-            <LicenseInfoPanel license={selectedLicense} />
-          </div>
-        </div>
-
-        <LicenseComparison />
-      </main>
+      {renderLayout()}
 
       <Footer />
     </div>

@@ -3,6 +3,15 @@ export interface Theme {
   name: string;
   description: string;
   
+  // Layout configuration - determines the structural layout
+  layout: {
+    type: 'two-column' | 'single-column' | 'three-column' | 'sidebar-left' | 'sidebar-right' | 'tabs' | 'accordion' | 'cards-grid' | 'masonry' | 'dashboard';
+    heroStyle: 'gradient' | 'solid' | 'pattern' | 'animated' | 'minimal' | 'split';
+    cardStyle: 'rounded' | 'sharp' | 'glass' | 'neumorphic' | 'elevated' | 'flat';
+    spacing: 'compact' | 'normal' | 'relaxed' | 'wide';
+    direction: 'ltr' | 'rtl';
+  };
+  
   // Background colors and gradients
   background: {
     main: string;
@@ -24,13 +33,6 @@ export interface Theme {
     backgroundAnimation?: string;
     cardAnimation?: string;
     heroAnimation?: string;
-  };
-  
-  // Layout style
-  layout: {
-    heroStyle: 'gradient' | 'solid' | 'pattern' | 'animated';
-    cardStyle: 'rounded' | 'sharp' | 'glass' | 'neumorphic';
-    spacing: 'compact' | 'normal' | 'relaxed';
   };
   
   // Button styles

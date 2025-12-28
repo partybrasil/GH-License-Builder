@@ -23,9 +23,11 @@ export const themes: Theme[] = [
       heroAnimation: 'animate-fade-in',
     },
     layout: {
+      type: 'two-column',
       heroStyle: 'gradient',
       cardStyle: 'rounded',
       spacing: 'normal',
+      direction: 'ltr',
     },
     button: {
       primary: 'bg-white text-purple-600',
@@ -56,9 +58,11 @@ export const themes: Theme[] = [
       heroAnimation: 'animate-flicker',
     },
     layout: {
+      type: 'sidebar-right',
       heroStyle: 'animated',
       cardStyle: 'sharp',
       spacing: 'compact',
+      direction: 'ltr',
     },
     button: {
       primary: 'bg-cyan-500 text-black border-2 border-cyan-400',
@@ -88,9 +92,11 @@ export const themes: Theme[] = [
       heroAnimation: 'animate-slide-down',
     },
     layout: {
+      type: 'single-column',
       heroStyle: 'solid',
       cardStyle: 'sharp',
       spacing: 'relaxed',
+      direction: 'ltr',
     },
     button: {
       primary: 'bg-gray-900 text-white',
@@ -121,9 +127,11 @@ export const themes: Theme[] = [
       heroAnimation: 'animate-grow',
     },
     layout: {
+      type: 'three-column',
       heroStyle: 'gradient',
       cardStyle: 'rounded',
       spacing: 'normal',
+      direction: 'ltr',
     },
     button: {
       primary: 'bg-emerald-600 text-white',
@@ -154,9 +162,11 @@ export const themes: Theme[] = [
       heroAnimation: 'animate-ripple',
     },
     layout: {
+      type: 'dashboard',
       heroStyle: 'animated',
       cardStyle: 'glass',
       spacing: 'normal',
+      direction: 'ltr',
     },
     button: {
       primary: 'bg-cyan-500 text-white',
@@ -187,9 +197,11 @@ export const themes: Theme[] = [
       heroAnimation: 'animate-fade-in',
     },
     layout: {
+      type: 'cards-grid',
       heroStyle: 'gradient',
       cardStyle: 'rounded',
       spacing: 'relaxed',
+      direction: 'ltr',
     },
     button: {
       primary: 'bg-orange-500 text-white',
@@ -220,9 +232,11 @@ export const themes: Theme[] = [
       heroAnimation: 'animate-neon-pulse',
     },
     layout: {
+      type: 'sidebar-left',
       heroStyle: 'animated',
       cardStyle: 'sharp',
       spacing: 'normal',
+      direction: 'ltr',
     },
     button: {
       primary: 'bg-pink-500 text-white border-2 border-pink-400',
@@ -252,9 +266,11 @@ export const themes: Theme[] = [
       heroAnimation: 'animate-fade-in',
     },
     layout: {
+      type: 'tabs',
       heroStyle: 'solid',
       cardStyle: 'rounded',
       spacing: 'normal',
+      direction: 'ltr',
     },
     button: {
       primary: 'bg-blue-600 text-white',
@@ -285,9 +301,11 @@ export const themes: Theme[] = [
       heroAnimation: 'animate-shimmer',
     },
     layout: {
+      type: 'masonry',
       heroStyle: 'animated',
       cardStyle: 'glass',
       spacing: 'normal',
+      direction: 'ltr',
     },
     button: {
       primary: 'bg-green-400 text-black',
@@ -318,9 +336,11 @@ export const themes: Theme[] = [
       heroAnimation: 'animate-float',
     },
     layout: {
+      type: 'accordion',
       heroStyle: 'animated',
       cardStyle: 'glass',
       spacing: 'normal',
+      direction: 'ltr',
     },
     button: {
       primary: 'bg-purple-600 text-white',
@@ -351,9 +371,11 @@ export const themes: Theme[] = [
       heroAnimation: 'animate-fade-in',
     },
     layout: {
+      type: 'two-column',
       heroStyle: 'gradient',
       cardStyle: 'rounded',
       spacing: 'relaxed',
+      direction: 'rtl',
     },
     button: {
       primary: 'bg-purple-400 text-white',
@@ -383,9 +405,11 @@ export const themes: Theme[] = [
       heroAnimation: 'animate-slide-down',
     },
     layout: {
+      type: 'single-column',
       heroStyle: 'solid',
       cardStyle: 'sharp',
       spacing: 'compact',
+      direction: 'ltr',
     },
     button: {
       primary: 'bg-black text-white border-4 border-black',
@@ -416,9 +440,11 @@ export const themes: Theme[] = [
       heroAnimation: 'animate-ember-pulse',
     },
     layout: {
+      type: 'cards-grid',
       heroStyle: 'animated',
       cardStyle: 'glass',
       spacing: 'normal',
+      direction: 'ltr',
     },
     button: {
       primary: 'bg-orange-500 text-white',
@@ -449,9 +475,11 @@ export const themes: Theme[] = [
       heroAnimation: 'animate-fade-in',
     },
     layout: {
+      type: 'sidebar-right',
       heroStyle: 'gradient',
       cardStyle: 'glass',
       spacing: 'normal',
+      direction: 'ltr',
     },
     button: {
       primary: 'bg-cyan-500 text-white',
@@ -482,9 +510,11 @@ export const themes: Theme[] = [
       heroAnimation: 'animate-grow',
     },
     layout: {
+      type: 'three-column',
       heroStyle: 'animated',
       cardStyle: 'glass',
       spacing: 'normal',
+      direction: 'ltr',
     },
     button: {
       primary: 'bg-green-600 text-white',
@@ -515,9 +545,11 @@ export const themes: Theme[] = [
       heroAnimation: 'animate-fade-in',
     },
     layout: {
+      type: 'dashboard',
       heroStyle: 'gradient',
       cardStyle: 'rounded',
       spacing: 'relaxed',
+      direction: 'ltr',
     },
     button: {
       primary: 'bg-amber-600 text-white',
@@ -548,9 +580,11 @@ export const themes: Theme[] = [
       heroAnimation: 'animate-glitch',
     },
     layout: {
+      type: 'tabs',
       heroStyle: 'animated',
       cardStyle: 'sharp',
       spacing: 'compact',
+      direction: 'ltr',
     },
     button: {
       primary: 'bg-green-500 text-black border-2 border-green-400',
@@ -581,9 +615,11 @@ export const themes: Theme[] = [
       heroAnimation: 'animate-wiggle',
     },
     layout: {
+      type: 'masonry',
       heroStyle: 'gradient',
       cardStyle: 'rounded',
-      spacing: 'relaxed',
+      spacing: 'normal',
+      direction: 'ltr',
     },
     button: {
       primary: 'bg-pink-500 text-white border-4 border-pink-400 rounded-full',
@@ -612,9 +648,11 @@ export const themes: Theme[] = [
       cardAnimation: 'transition-all duration-200',
     },
     layout: {
+      type: 'accordion',
       heroStyle: 'solid',
       cardStyle: 'sharp',
       spacing: 'compact',
+      direction: 'ltr',
     },
     button: {
       primary: 'bg-gray-900 text-white border-2 border-gray-900',
@@ -645,9 +683,11 @@ export const themes: Theme[] = [
       heroAnimation: 'animate-fade-in',
     },
     layout: {
+      type: 'sidebar-left',
       heroStyle: 'pattern',
       cardStyle: 'glass',
       spacing: 'normal',
+      direction: 'ltr',
     },
     button: {
       primary: 'bg-white/30 text-white backdrop-blur border border-white/40',
